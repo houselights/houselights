@@ -30,7 +30,8 @@ class EventResource extends Resource
                     ->required(),
                 Textarea::make('description')
                     ->required(),
-            ]);
+            ])
+            ->columns(1);
     }
 
     public static function table(Table $table): Table
@@ -68,7 +69,9 @@ class EventResource extends Resource
     public static function getRelations(): array
     {
         return [
-            //
+            RelationManagers\SessionsRelationManager::class,
+            RelationManagers\RegistrantsRelationManager::class,
+            RelationManagers\TicketTypesRelationManager::class,
         ];
     }
 

@@ -13,7 +13,8 @@ return new class extends Migration
     {
         Schema::create('event_attendees', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('event_id');
+            $table->unsignedBigInteger('session_id');
+            $table->unsignedBigInteger('ticket_id');
             $table->timestamps();
         });
     }

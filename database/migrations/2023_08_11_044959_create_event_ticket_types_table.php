@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('event_ticket_types', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('event_id');
             $table->string('name');
             $table->text('description');
             $table->timestamps();

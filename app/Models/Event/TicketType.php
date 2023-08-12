@@ -11,6 +11,10 @@ class TicketType extends Model
 {
     use HasFactory;
 
+    protected $fillable = ['name', 'description'];
+
+    protected $table = "event_ticket_types";
+
     public function event(): BelongsTo
     {
         return $this->belongsTo(Event::class);

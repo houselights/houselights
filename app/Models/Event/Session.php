@@ -11,6 +11,10 @@ class Session extends Model
 {
     use HasFactory;
 
+    protected $fillable = ['name', 'description'];
+
+    protected $table = "event_sessions";
+
     public function event(): BelongsTo
     {
         return $this->belongsTo(Event::class);
