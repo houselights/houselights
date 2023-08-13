@@ -5,6 +5,7 @@ namespace App\Filament\Resources\EventResource\RelationManagers;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\RelationManagers\RelationManager;
+use Filament\Support\Enums\FontFamily;
 use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
@@ -30,7 +31,8 @@ class RegistrantsRelationManager extends RelationManager
         return $table
             ->recordTitleAttribute('email')
             ->columns([
-                Tables\Columns\TextColumn::make('email'),
+                Tables\Columns\TextColumn::make('id')->fontFamily(FontFamily::Mono),
+                Tables\Columns\TextColumn::make('user.name'),
             ])
             ->filters([
                 //

@@ -5,6 +5,7 @@ namespace App\Filament\Resources\Event\TicketTypeResource\RelationManagers;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\RelationManagers\RelationManager;
+use Filament\Support\Enums\FontFamily;
 use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
@@ -29,6 +30,7 @@ class TicketsRelationManager extends RelationManager
         return $table
             ->recordTitleAttribute('email')
             ->columns([
+                Tables\Columns\TextColumn::make('id')->fontFamily(FontFamily::Mono),
                 Tables\Columns\TextColumn::make('email'),
             ])
             ->filters([
