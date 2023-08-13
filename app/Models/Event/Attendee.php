@@ -11,6 +11,8 @@ class Attendee extends Model
 {
     use HasFactory;
 
+    protected $table = "event_attendees";
+
     public function event(): BelongsTo
     {
         return $this->belongsTo(Event::class);
