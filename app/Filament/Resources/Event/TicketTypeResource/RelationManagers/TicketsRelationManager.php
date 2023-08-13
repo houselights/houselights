@@ -18,9 +18,9 @@ class TicketsRelationManager extends RelationManager
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('email')
-                    ->required()
-                    ->maxLength(255),
+                Forms\Components\Select::make("user_id")
+                    ->relationship(name: 'user', titleAttribute: 'name')
+                    ->searchable(['email']),
             ]);
     }
 

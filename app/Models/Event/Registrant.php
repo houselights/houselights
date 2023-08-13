@@ -12,7 +12,7 @@ class Registrant extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['email'];
+    protected $fillable = ['user_id'];
 
     protected $table = "event_registrants";
 

@@ -14,6 +14,8 @@ class Ticket extends Model
 
     protected $table = "event_tickets";
 
+    protected $fillable = ['user_id'];
+
     public function user(): BelongsTo
     {
         return $this->belongsTo(User::class);
