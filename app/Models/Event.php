@@ -8,10 +8,12 @@ use App\Models\Event\TicketType;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Kra8\Snowflake\HasSnowflakePrimary;
 
 class Event extends Model
 {
     use HasFactory;
+    use HasSnowflakePrimary;
 
     protected $fillable = ['name', 'description'];
 

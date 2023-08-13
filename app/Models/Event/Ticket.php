@@ -7,10 +7,12 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Kra8\Snowflake\HasSnowflakePrimary;
 
 class Ticket extends Model
 {
     use HasFactory;
+    use HasSnowflakePrimary;
 
     protected $table = "event_tickets";
 
