@@ -19,9 +19,8 @@ class AttendeesRelationManager extends RelationManager
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('email')
-                    ->required()
-                    ->maxLength(255),
+                Forms\Components\Select::make("ticket_id")
+                    ->relationship(name: 'ticket', titleAttribute: 'id'),
             ]);
     }
 
@@ -31,7 +30,7 @@ class AttendeesRelationManager extends RelationManager
             ->recordTitleAttribute('email')
             ->columns([
                 Tables\Columns\TextColumn::make('id')->fontFamily(FontFamily::Mono),
-                Tables\Columns\TextColumn::make('email'),
+                Tables\Columns\TextColumn::make('ticket_id'),
             ])
             ->filters([
                 //

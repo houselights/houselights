@@ -15,8 +15,15 @@ class Attendee extends Model
 
     protected $table = "event_attendees";
 
-    public function event(): BelongsTo
+    protected $fillable = ['ticket_id'];
+
+    public function session(): BelongsTo
     {
-        return $this->belongsTo(Event::class);
+        return $this->belongsTo(Session::class);
+    }
+
+    public function ticket(): BelongsTo
+    {
+        return $this->belongsTo(Ticket::class);
     }
 }
