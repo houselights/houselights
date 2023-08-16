@@ -35,9 +35,11 @@ class TicketResource extends Resource
     {
         return $table
             ->columns([
-                TextColumn::make('id')
-                    ->sortable()
-                    ->fontFamily(FontFamily::Mono),
+                TextColumn::make('id')->sortable()->fontFamily(FontFamily::Mono),
+                TextColumn::make('ticketType.name'),
+                TextColumn::make('user.name'),
+                TextColumn::make('created_at')->dateTime('Y-m-d H:i:s'),
+                TextColumn::make('updated_at')->dateTime('Y-m-d H:i:s'),
             ])
             ->filters([
                 //
