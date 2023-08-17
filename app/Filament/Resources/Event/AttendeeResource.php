@@ -19,6 +19,8 @@ class AttendeeResource extends Resource
 {
     protected static ?string $model = Attendee::class;
 
+    protected static ?string $navigationLabel = "Attendees";
+
     protected static ?int $navigationSort = 60;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';

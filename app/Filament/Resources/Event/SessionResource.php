@@ -23,6 +23,8 @@ class SessionResource extends Resource
 {
     protected static ?string $model = Session::class;
 
+    protected static ?string $navigationLabel = "Sessions";
+
     protected static ?int $navigationSort = 20;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';

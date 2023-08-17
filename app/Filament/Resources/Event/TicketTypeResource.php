@@ -23,6 +23,8 @@ class TicketTypeResource extends Resource
 {
     protected static ?string $model = TicketType::class;
 
+    protected static ?string $navigationLabel = "Ticket Types";
+
     protected static ?int $navigationSort = 30;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';

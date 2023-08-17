@@ -21,6 +21,8 @@ class EventResource extends Resource
 {
     protected static ?string $model = Event::class;
 
+    protected static ?string $navigationLabel = "Events";
+
     protected static ?int $navigationSort = 10;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';

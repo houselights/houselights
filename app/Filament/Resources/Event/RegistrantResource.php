@@ -23,6 +23,8 @@ class RegistrantResource extends Resource
 {
     protected static ?string $model = Registrant::class;
 
+    protected static ?string $navigationLabel = "Registrants";
+
     protected static ?int $navigationSort = 40;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
