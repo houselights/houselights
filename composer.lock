@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "3x1io/filament-user",
-            "version": "v1.1.9",
+            "version": "v1.1.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/3x1io/filament-user.git",
-                "reference": "bbe662bb5b33a2d3c862acc5c69e7be835601b60"
+                "reference": "9f7336c40dac2a778c21cbababc879136755971e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/3x1io/filament-user/zipball/bbe662bb5b33a2d3c862acc5c69e7be835601b60",
-                "reference": "bbe662bb5b33a2d3c862acc5c69e7be835601b60",
+                "url": "https://api.github.com/repos/3x1io/filament-user/zipball/9f7336c40dac2a778c21cbababc879136755971e",
+                "reference": "9f7336c40dac2a778c21cbababc879136755971e",
                 "shasum": ""
             },
             "require": {
@@ -64,7 +64,7 @@
             ],
             "support": {
                 "issues": "https://github.com/3x1io/filament-user/issues",
-                "source": "https://github.com/3x1io/filament-user/tree/v1.1.9"
+                "source": "https://github.com/3x1io/filament-user/tree/v1.1.11"
             },
             "funding": [
                 {
@@ -72,7 +72,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-08-02T10:48:00+00:00"
+            "time": "2023-08-24T07:23:50+00:00"
         },
         {
             "name": "bacon/bacon-qr-code",
