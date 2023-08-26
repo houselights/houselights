@@ -13,5 +13,10 @@ class RegistrantController extends Controller
         $registrant = $event->registrants()->make($request->all());
         $registrant->user()->associate(Auth::user());
         $registrant->save();
+
+        $ticket = Event\Ticket::make();
+        $ticket->ticketType()->associate(Event\TicketType::find($request->get('ticketTypeId')));
+        $ticket->user()->associate(Auth::user());
+        $ticket->save();
     }
 }
