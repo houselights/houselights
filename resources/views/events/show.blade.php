@@ -1,16 +1,34 @@
-@extends('layouts.app')
+<x-app-layout>
+    <x-slot name="header">
+        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+            {{ __('活动列表') }}
+        </h2>
+    </x-slot>
 
-@section('content')
-    <div class="container">
-        <h1>{{ $event->name }}</h1>
+    <div class="py-12">
+        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+            <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
+                <img src="https://picsum.photos/1600/400"/>
+                <div class="p-6">
 
-        <div>{{ $event->description }}</div>
+                    <x-header title="{{ $event->name }}" subtitle="{{ $event->description }}" separator/>
 
-        <div>
-            <form method="post" action="{{ route('events.registrants.store', $event) }}">
-                {{ csrf_field() }}
-                <button type="submit" class="btn btn-primary">Registrant</button>
-            </form>
+                    <x-form method="post" action="{{ route('events.registrants.store', $event) }}">
+                        {{ csrf_field() }}
+
+                        会议
+                        @foreach($event->sessions as $session)
+                            <x-checkbox label="{{ $session->name }}" name="sessions[]" value="{{ $session->id }}"/>
+                        @endforeach
+
+                        <x-select label="票类型" :options="$event->ticketTypes" name="ticketTypeId"/>
+
+                        <x-slot:actions>
+                            <x-button label="报名" class="btn-primary" type="submit" spinner="save"/>
+                        </x-slot:actions>
+                    </x-form>
+                </div>
+            </div>
         </div>
     </div>
-@endsection
+</x-app-layout>
