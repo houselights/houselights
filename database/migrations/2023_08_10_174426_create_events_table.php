@@ -15,6 +15,9 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->text('description');
+            $table->string('timezone');
+            $table->string('type');
+            $table->string('access_level');
             $table->timestamps();
         });
     }
