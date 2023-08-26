@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f85db2495090ca8bec783f14771c3428",
+    "content-hash": "77ed968b9cdec8c74583323c7d9536ba",
     "packages": [
         {
             "name": "3x1io/filament-user",
@@ -3872,16 +3872,16 @@
         },
         {
             "name": "livewire/livewire",
-            "version": "v3.0.0",
+            "version": "v3.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/livewire/livewire.git",
-                "reference": "b2ba0baa66ddc294ba7b8b105d750dc5124056ba"
+                "reference": "2e426e8d47e03c4777334ec0c8397341bcfa15f3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/livewire/livewire/zipball/b2ba0baa66ddc294ba7b8b105d750dc5124056ba",
-                "reference": "b2ba0baa66ddc294ba7b8b105d750dc5124056ba",
+                "url": "https://api.github.com/repos/livewire/livewire/zipball/2e426e8d47e03c4777334ec0c8397341bcfa15f3",
+                "reference": "2e426e8d47e03c4777334ec0c8397341bcfa15f3",
                 "shasum": ""
             },
             "require": {
@@ -3933,7 +3933,7 @@
             "description": "A front-end framework for Laravel.",
             "support": {
                 "issues": "https://github.com/livewire/livewire/issues",
-                "source": "https://github.com/livewire/livewire/tree/v3.0.0"
+                "source": "https://github.com/livewire/livewire/tree/v3.0.1"
             },
             "funding": [
                 {
@@ -3941,7 +3941,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-08-24T15:33:35+00:00"
+            "time": "2023-08-25T18:13:03+00:00"
         },
         {
             "name": "masterminds/html5",
@@ -5577,6 +5577,71 @@
                 }
             ],
             "time": "2023-04-15T23:01:58+00:00"
+        },
+        {
+            "name": "robsontenorio/mary",
+            "version": "0.30.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/robsontenorio/mary.git",
+                "reference": "757504c9e1a78b24e84daa25d62db2ae592b1436"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/robsontenorio/mary/zipball/757504c9e1a78b24e84daa25d62db2ae592b1436",
+                "reference": "757504c9e1a78b24e84daa25d62db2ae592b1436",
+                "shasum": ""
+            },
+            "require": {
+                "blade-ui-kit/blade-heroicons": "^2.1",
+                "illuminate/support": "~10"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^8.5",
+                "phpunit/phpunit": "^10.2"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Mary\\MaryServiceProvider"
+                    ],
+                    "aliases": {
+                        "Mary": "Mary\\Facades\\Mary"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Mary\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Robson Tenório",
+                    "email": "rrtenorio@gmail.com",
+                    "homepage": "https://github.com/robsontenorio"
+                }
+            ],
+            "description": "Laravel blade components for Livewire 3",
+            "homepage": "https://mary-ui.com",
+            "keywords": [
+                "Mary",
+                "blade",
+                "components",
+                "laravel",
+                "livewire",
+                "ui"
+            ],
+            "support": {
+                "issues": "https://github.com/robsontenorio/mary/issues",
+                "source": "https://github.com/robsontenorio/mary/tree/0.30.2"
+            },
+            "time": "2023-08-25T18:48:16+00:00"
         },
         {
             "name": "ryangjchandler/blade-capture-directive",

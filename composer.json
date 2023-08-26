@@ -20,7 +20,8 @@
         "laravel/sanctum": "^3.2",
         "laravel/telescope": "^4.16",
         "laravel/tinker": "^2.8",
-        "livewire/livewire": "^3.0"
+        "livewire/livewire": "^3.0",
+        "robsontenorio/mary": "^0.30.2"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.9",
