@@ -23,6 +23,8 @@ class SessionResource extends Resource
 {
     protected static ?string $model = Session::class;
 
+    protected static ?string $navigationGroup = "Event";
+
     protected static ?string $navigationLabel = "Sessions";
 
     protected static ?int $navigationSort = 20;
@@ -59,7 +61,7 @@ class SessionResource extends Resource
                 ]),
             ])
             ->emptyStateActions([
-                Tables\Actions\CreateAction::make(),
+                //Tables\Actions\CreateAction::make(),
             ]);
     }
 
@@ -74,7 +76,7 @@ class SessionResource extends Resource
     {
         return [
             'index' => Pages\ListSessions::route('/'),
-            'create' => Pages\CreateSession::route('/create'),
+            //'create' => Pages\CreateSession::route('/create'),
             'edit' => Pages\EditSession::route('/{record}/edit'),
         ];
     }

@@ -19,6 +19,8 @@ class TicketResource extends Resource
 {
     protected static ?string $model = Ticket::class;
 
+    protected static ?string $navigationGroup = "Event";
+
     protected static ?string $navigationLabel = "Tickets";
 
     protected static ?int $navigationSort = 50;
@@ -55,7 +57,7 @@ class TicketResource extends Resource
                 ]),
             ])
             ->emptyStateActions([
-                Tables\Actions\CreateAction::make(),
+                //Tables\Actions\CreateAction::make(),
             ]);
     }
 
@@ -70,7 +72,7 @@ class TicketResource extends Resource
     {
         return [
             'index' => Pages\ListTickets::route('/'),
-            'create' => Pages\CreateTicket::route('/create'),
+            //'create' => Pages\CreateTicket::route('/create'),
             'edit' => Pages\EditTicket::route('/{record}/edit'),
         ];
     }

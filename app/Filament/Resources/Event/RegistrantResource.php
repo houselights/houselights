@@ -23,6 +23,8 @@ class RegistrantResource extends Resource
 {
     protected static ?string $model = Registrant::class;
 
+    protected static ?string $navigationGroup = "Event";
+
     protected static ?string $navigationLabel = "Registrants";
 
     protected static ?int $navigationSort = 40;
@@ -59,7 +61,7 @@ class RegistrantResource extends Resource
                 ]),
             ])
             ->emptyStateActions([
-                Tables\Actions\CreateAction::make(),
+                //Tables\Actions\CreateAction::make(),
             ]);
     }
 
@@ -74,7 +76,7 @@ class RegistrantResource extends Resource
     {
         return [
             'index' => Pages\ListRegistrants::route('/'),
-            'create' => Pages\CreateRegistrant::route('/create'),
+            //'create' => Pages\CreateRegistrant::route('/create'),
             'edit' => Pages\EditRegistrant::route('/{record}/edit'),
         ];
     }

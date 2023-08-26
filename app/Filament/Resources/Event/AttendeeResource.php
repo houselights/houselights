@@ -19,6 +19,8 @@ class AttendeeResource extends Resource
 {
     protected static ?string $model = Attendee::class;
 
+    protected static ?string $navigationGroup = "Event";
+
     protected static ?string $navigationLabel = "Attendees";
 
     protected static ?int $navigationSort = 60;
@@ -57,7 +59,7 @@ class AttendeeResource extends Resource
                 ]),
             ])
             ->emptyStateActions([
-                Tables\Actions\CreateAction::make(),
+                //Tables\Actions\CreateAction::make(),
             ]);
     }
 
@@ -72,7 +74,7 @@ class AttendeeResource extends Resource
     {
         return [
             'index' => Pages\ListAttendees::route('/'),
-            'create' => Pages\CreateAttendee::route('/create'),
+            //'create' => Pages\CreateAttendee::route('/create'),
             'edit' => Pages\EditAttendee::route('/{record}/edit'),
         ];
     }
