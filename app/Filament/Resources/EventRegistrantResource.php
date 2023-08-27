@@ -1,27 +1,23 @@
 <?php
 
-namespace App\Filament\Resources\Event;
+namespace App\Filament\Resources;
 
-use App\Filament\Resources\Event\RegistrantResource\Pages;
-use App\Filament\Resources\Event\RegistrantResource\RelationManagers;
-use App\Models\Event\Registrant;
-use Filament\Facades\Filament;
+use App\Filament\Resources\EventRegistrantResource\Pages;
+use App\Filament\Resources\EventRegistrantResource\RelationManagers;
+use App\Models\EventRegistrant;
 use Filament\Forms;
 use Filament\Forms\Form;
-use Filament\Panel;
 use Filament\Resources\Resource;
 use Filament\Support\Enums\FontFamily;
 use Filament\Tables;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
-use Illuminate\Support\Facades\Route;
 
-class RegistrantResource extends Resource
+class EventRegistrantResource extends Resource
 {
-    protected static ?string $model = Registrant::class;
+    protected static ?string $model = EventRegistrant::class;
 
     protected static ?string $navigationGroup = "Event";
 
@@ -75,9 +71,9 @@ class RegistrantResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListRegistrants::route('/'),
-            //'create' => Pages\CreateRegistrant::route('/create'),
-            'edit' => Pages\EditRegistrant::route('/{record}/edit'),
+            'index' => Pages\ListEventRegistrants::route('/'),
+            //'create' => Pages\CreateEventRegistrant::route('/create'),
+            'edit' => Pages\EditEventRegistrant::route('/{record}/edit'),
         ];
     }
 }
