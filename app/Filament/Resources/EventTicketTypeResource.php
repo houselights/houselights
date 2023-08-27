@@ -1,27 +1,23 @@
 <?php
 
-namespace App\Filament\Resources\Event;
+namespace App\Filament\Resources;
 
-use App\Filament\Resources\Event\TicketTypeResource\Pages;
-use App\Filament\Resources\Event\TicketTypeResource\RelationManagers;
-use App\Models\Event\TicketType;
-use Filament\Facades\Filament;
+use App\Filament\Resources\EventTicketTypeResource\Pages;
+use App\Filament\Resources\EventTicketTypeResource\RelationManagers;
+use App\Models\EventTicketType;
 use Filament\Forms;
 use Filament\Forms\Form;
-use Filament\Panel;
 use Filament\Resources\Resource;
 use Filament\Support\Enums\FontFamily;
 use Filament\Tables;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
-use Illuminate\Support\Facades\Route;
 
-class TicketTypeResource extends Resource
+class EventTicketTypeResource extends Resource
 {
-    protected static ?string $model = TicketType::class;
+    protected static ?string $model = EventTicketType::class;
 
     protected static ?string $navigationGroup = "Event";
 
@@ -75,9 +71,9 @@ class TicketTypeResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListTicketTypes::route('/'),
-            //'create' => Pages\CreateTicketType::route('/create'),
-            'edit' => Pages\EditTicketType::route('/{record}/edit'),
+            'index' => Pages\ListEventTicketTypes::route('/'),
+            //'create' => Pages\CreateEventTicketType::route('/create'),
+            'edit' => Pages\EditEventTicketType::route('/{record}/edit'),
         ];
     }
 }

@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Policies\Event;
+namespace App\Policies;
 
 use App\Models\User;
-use App\Models\Event\Registrant;
+use App\Models\EventTicketType;
 use Illuminate\Auth\Access\HandlesAuthorization;
 
-class RegistrantPolicy
+class EventTicketTypePolicy
 {
     use HandlesAuthorization;
 
@@ -18,19 +18,19 @@ class RegistrantPolicy
      */
     public function viewAny(User $user): bool
     {
-        return $user->can('view_any_event::registrant');
+        return $user->can('view_any_event::ticket::type');
     }
 
     /**
      * Determine whether the user can view the model.
      *
      * @param  \App\Models\User  $user
-     * @param  \App\Models\Event\Registrant  $registrant
+     * @param  \App\Models\EventTicketType  $eventTicketType
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function view(User $user, Registrant $registrant): bool
+    public function view(User $user, EventTicketType $eventTicketType): bool
     {
-        return $user->can('view_event::registrant');
+        return $user->can('view_event::ticket::type');
     }
 
     /**
@@ -41,31 +41,31 @@ class RegistrantPolicy
      */
     public function create(User $user): bool
     {
-        return $user->can('create_event::registrant');
+        return $user->can('create_event::ticket::type');
     }
 
     /**
      * Determine whether the user can update the model.
      *
      * @param  \App\Models\User  $user
-     * @param  \App\Models\Event\Registrant  $registrant
+     * @param  \App\Models\EventTicketType  $eventTicketType
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function update(User $user, Registrant $registrant): bool
+    public function update(User $user, EventTicketType $eventTicketType): bool
     {
-        return $user->can('update_event::registrant');
+        return $user->can('update_event::ticket::type');
     }
 
     /**
      * Determine whether the user can delete the model.
      *
      * @param  \App\Models\User  $user
-     * @param  \App\Models\Event\Registrant  $registrant
+     * @param  \App\Models\EventTicketType  $eventTicketType
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function delete(User $user, Registrant $registrant): bool
+    public function delete(User $user, EventTicketType $eventTicketType): bool
     {
-        return $user->can('delete_event::registrant');
+        return $user->can('delete_event::ticket::type');
     }
 
     /**
@@ -76,19 +76,19 @@ class RegistrantPolicy
      */
     public function deleteAny(User $user): bool
     {
-        return $user->can('delete_any_event::registrant');
+        return $user->can('delete_any_event::ticket::type');
     }
 
     /**
      * Determine whether the user can permanently delete.
      *
      * @param  \App\Models\User  $user
-     * @param  \App\Models\Event\Registrant  $registrant
+     * @param  \App\Models\EventTicketType  $eventTicketType
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function forceDelete(User $user, Registrant $registrant): bool
+    public function forceDelete(User $user, EventTicketType $eventTicketType): bool
     {
-        return $user->can('force_delete_event::registrant');
+        return $user->can('force_delete_event::ticket::type');
     }
 
     /**
@@ -99,19 +99,19 @@ class RegistrantPolicy
      */
     public function forceDeleteAny(User $user): bool
     {
-        return $user->can('force_delete_any_event::registrant');
+        return $user->can('force_delete_any_event::ticket::type');
     }
 
     /**
      * Determine whether the user can restore.
      *
      * @param  \App\Models\User  $user
-     * @param  \App\Models\Event\Registrant  $registrant
+     * @param  \App\Models\EventTicketType  $eventTicketType
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function restore(User $user, Registrant $registrant): bool
+    public function restore(User $user, EventTicketType $eventTicketType): bool
     {
-        return $user->can('restore_event::registrant');
+        return $user->can('restore_event::ticket::type');
     }
 
     /**
@@ -122,19 +122,19 @@ class RegistrantPolicy
      */
     public function restoreAny(User $user): bool
     {
-        return $user->can('restore_any_event::registrant');
+        return $user->can('restore_any_event::ticket::type');
     }
 
     /**
      * Determine whether the user can replicate.
      *
      * @param  \App\Models\User  $user
-     * @param  \App\Models\Event\Registrant  $registrant
+     * @param  \App\Models\EventTicketType  $eventTicketType
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function replicate(User $user, Registrant $registrant): bool
+    public function replicate(User $user, EventTicketType $eventTicketType): bool
     {
-        return $user->can('replicate_event::registrant');
+        return $user->can('replicate_event::ticket::type');
     }
 
     /**
@@ -145,7 +145,7 @@ class RegistrantPolicy
      */
     public function reorder(User $user): bool
     {
-        return $user->can('reorder_event::registrant');
+        return $user->can('reorder_event::ticket::type');
     }
 
 }

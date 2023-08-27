@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Filament\Resources\Event\TicketTypeResource\RelationManagers;
+namespace App\Filament\Resources\EventTicketTypeResource\RelationManagers;
 
 use Filament\Forms;
 use Filament\Forms\Form;

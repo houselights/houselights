@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Policies\Event;
+namespace App\Policies;
 
 use App\Models\User;
-use App\Models\Event\Attendee;
+use App\Models\EventSessionAttendee;
 use Illuminate\Auth\Access\HandlesAuthorization;
 
-class AttendeePolicy
+class EventSessionAttendeePolicy
 {
     use HandlesAuthorization;
 
@@ -18,19 +18,19 @@ class AttendeePolicy
      */
     public function viewAny(User $user): bool
     {
-        return $user->can('view_any_event::attendee');
+        return $user->can('view_any_event::session::attendee');
     }
 
     /**
      * Determine whether the user can view the model.
      *
      * @param  \App\Models\User  $user
-     * @param  \App\Models\Event\Attendee  $attendee
+     * @param  \App\Models\EventSessionAttendee  $eventSessionAttendee
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function view(User $user, Attendee $attendee): bool
+    public function view(User $user, EventSessionAttendee $eventSessionAttendee): bool
     {
-        return $user->can('view_event::attendee');
+        return $user->can('view_event::session::attendee');
     }
 
     /**
@@ -41,31 +41,31 @@ class AttendeePolicy
      */
     public function create(User $user): bool
     {
-        return $user->can('create_event::attendee');
+        return $user->can('create_event::session::attendee');
     }
 
     /**
      * Determine whether the user can update the model.
      *
      * @param  \App\Models\User  $user
-     * @param  \App\Models\Event\Attendee  $attendee
+     * @param  \App\Models\EventSessionAttendee  $eventSessionAttendee
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function update(User $user, Attendee $attendee): bool
+    public function update(User $user, EventSessionAttendee $eventSessionAttendee): bool
     {
-        return $user->can('update_event::attendee');
+        return $user->can('update_event::session::attendee');
     }
 
     /**
      * Determine whether the user can delete the model.
      *
      * @param  \App\Models\User  $user
-     * @param  \App\Models\Event\Attendee  $attendee
+     * @param  \App\Models\EventSessionAttendee  $eventSessionAttendee
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function delete(User $user, Attendee $attendee): bool
+    public function delete(User $user, EventSessionAttendee $eventSessionAttendee): bool
     {
-        return $user->can('delete_event::attendee');
+        return $user->can('delete_event::session::attendee');
     }
 
     /**
@@ -76,19 +76,19 @@ class AttendeePolicy
      */
     public function deleteAny(User $user): bool
     {
-        return $user->can('delete_any_event::attendee');
+        return $user->can('delete_any_event::session::attendee');
     }
 
     /**
      * Determine whether the user can permanently delete.
      *
      * @param  \App\Models\User  $user
-     * @param  \App\Models\Event\Attendee  $attendee
+     * @param  \App\Models\EventSessionAttendee  $eventSessionAttendee
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function forceDelete(User $user, Attendee $attendee): bool
+    public function forceDelete(User $user, EventSessionAttendee $eventSessionAttendee): bool
     {
-        return $user->can('force_delete_event::attendee');
+        return $user->can('force_delete_event::session::attendee');
     }
 
     /**
@@ -99,19 +99,19 @@ class AttendeePolicy
      */
     public function forceDeleteAny(User $user): bool
     {
-        return $user->can('force_delete_any_event::attendee');
+        return $user->can('force_delete_any_event::session::attendee');
     }
 
     /**
      * Determine whether the user can restore.
      *
      * @param  \App\Models\User  $user
-     * @param  \App\Models\Event\Attendee  $attendee
+     * @param  \App\Models\EventSessionAttendee  $eventSessionAttendee
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function restore(User $user, Attendee $attendee): bool
+    public function restore(User $user, EventSessionAttendee $eventSessionAttendee): bool
     {
-        return $user->can('restore_event::attendee');
+        return $user->can('restore_event::session::attendee');
     }
 
     /**
@@ -122,19 +122,19 @@ class AttendeePolicy
      */
     public function restoreAny(User $user): bool
     {
-        return $user->can('restore_any_event::attendee');
+        return $user->can('restore_any_event::session::attendee');
     }
 
     /**
      * Determine whether the user can replicate.
      *
      * @param  \App\Models\User  $user
-     * @param  \App\Models\Event\Attendee  $attendee
+     * @param  \App\Models\EventSessionAttendee  $eventSessionAttendee
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function replicate(User $user, Attendee $attendee): bool
+    public function replicate(User $user, EventSessionAttendee $eventSessionAttendee): bool
     {
-        return $user->can('replicate_event::attendee');
+        return $user->can('replicate_event::session::attendee');
     }
 
     /**
@@ -145,7 +145,7 @@ class AttendeePolicy
      */
     public function reorder(User $user): bool
     {
-        return $user->can('reorder_event::attendee');
+        return $user->can('reorder_event::session::attendee');
     }
 
 }
