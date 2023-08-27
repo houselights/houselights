@@ -16,6 +16,11 @@ return new class extends Migration
             $table->unsignedBigInteger('event_id');
             $table->string('name');
             $table->text('description');
+            $table->timestamp('start_time');
+            $table->timestamp('end_time');
+            $table->string('timezone');
+            $table->integer('type');
+
             $table->timestamps();
         });
     }

@@ -17,7 +17,7 @@ class Event extends Model
     use HasSnowflakePrimary;
     use HasTags;
 
-    protected $fillable = ['name', 'description'];
+    protected $fillable = ['name', 'description', 'timezone', 'event_type', 'access_level', 'meeting_type', 'status', 'start_time', 'end_time', 'contact_name', 'lobby_start_time', 'lobby_end_time'];
 
     public function sessions(): HasMany
     {

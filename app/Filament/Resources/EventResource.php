@@ -37,7 +37,28 @@ class EventResource extends Resource
                     ->required(),
                 Textarea::make('description')
                     ->required(),
+                Forms\Components\Select::make("timezone")
+                    ->options(["Asia/Shanghai"]),
+                Forms\Components\Select::make("event_type")
+                    ->options(["CONFERENCE", "SIMPLE_EVENT"]),
+                Forms\Components\Select::make("access_level")
+                    ->options(["PRIVATE_UNRESTRICTED", "PRIVATE_RESTRICTED"]),
+                Forms\Components\Select::make("meeting_type")
+                    ->options(["MEETING", "WEBINAR"]),
+                Forms\Components\SpatieTagsInput::make('categories'),
                 Forms\Components\SpatieTagsInput::make('tags'),
+                Forms\Components\Select::make("status")
+                    ->options(["PUBLISHED", "DRAFT"]),
+                Forms\Components\DateTimePicker::make('start_time'),
+                Forms\Components\DateTimePicker::make('end_time'),
+
+                TextInput::make('contact_name'),
+
+                Forms\Components\DateTimePicker::make('lobby_start_time'),
+                Forms\Components\DateTimePicker::make('lobby_end_time'),
+
+
+
             ])
             ->columns(1);
     }

@@ -16,8 +16,15 @@ return new class extends Migration
             $table->string('name');
             $table->text('description');
             $table->string('timezone');
-            $table->string('type');
+            $table->string('event_type');
             $table->string('access_level');
+            $table->string('meeting_type');
+            $table->string('status');
+            $table->timestamp('start_time');
+            $table->timestamp('end_time');
+            $table->string('contact_name');
+            $table->timestamp('lobby_start_time');
+            $table->timestamp('lobby_end_time');
             $table->timestamps();
         });
     }
