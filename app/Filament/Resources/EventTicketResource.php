@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Filament\Resources\Event;
+namespace App\Filament\Resources;
 
-use App\Filament\Resources\Event\TicketResource\Pages;
-use App\Filament\Resources\Event\TicketResource\RelationManagers;
-use App\Models\Event\Ticket;
+use App\Filament\Resources\EventTicketResource\Pages;
+use App\Filament\Resources\EventTicketResource\RelationManagers;
+use App\Models\EventTicket;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -15,9 +15,9 @@ use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
-class TicketResource extends Resource
+class EventTicketResource extends Resource
 {
-    protected static ?string $model = Ticket::class;
+    protected static ?string $model = EventTicket::class;
 
     protected static ?string $navigationGroup = "Event";
 
@@ -71,9 +71,9 @@ class TicketResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListTickets::route('/'),
-            //'create' => Pages\CreateTicket::route('/create'),
-            'edit' => Pages\EditTicket::route('/{record}/edit'),
+            'index' => Pages\ListEventTickets::route('/'),
+            //'create' => Pages\CreateEventTicket::route('/create'),
+            'edit' => Pages\EditEventTicket::route('/{record}/edit'),
         ];
     }
 }
