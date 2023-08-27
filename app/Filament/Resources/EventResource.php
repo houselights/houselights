@@ -37,6 +37,7 @@ class EventResource extends Resource
                     ->required(),
                 Textarea::make('description')
                     ->required(),
+                Forms\Components\SpatieTagsInput::make('tags'),
             ])
             ->columns(1);
     }

@@ -9,11 +9,13 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Kra8\Snowflake\HasSnowflakePrimary;
+use Spatie\Tags\HasTags;
 
 class Event extends Model
 {
     use HasFactory;
     use HasSnowflakePrimary;
+    use HasTags;
 
     protected $fillable = ['name', 'description'];
 
