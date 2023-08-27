@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreRegistrantRequest;
 use App\Models\Event;
+use App\Models\EventTicket;
+use App\Models\EventTicketType;
 use Illuminate\Support\Facades\Auth;
 
 class RegistrantController extends Controller
@@ -14,8 +16,8 @@ class RegistrantController extends Controller
         $registrant->user()->associate(Auth::user());
         $registrant->save();
 
-        $ticket = Event\Ticket::make();
-        $ticket->ticketType()->associate(Event\TicketType::find($request->get('ticketTypeId')));
+        $ticket = EventTicket::make();
+        $ticket->ticketType()->associate(EventTicketType::find($request->get('ticketTypeId')));
         $ticket->user()->associate(Auth::user());
         $ticket->save();
     }

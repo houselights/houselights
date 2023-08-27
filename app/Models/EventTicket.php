@@ -22,11 +22,11 @@ class EventTicket extends Model
 
     public function ticketType(): BelongsTo
     {
-        return $this->belongsTo(TicketType::class);
+        return $this->belongsTo(EventTicketType::class);
     }
 
     public function attendees(): HasMany
     {
-        return $this->hasMany(Attendee::class);
+        return $this->hasMany(EventSessionAttendee::class);
     }
 }
