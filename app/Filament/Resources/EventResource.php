@@ -2,6 +2,8 @@
 
 namespace App\Filament\Resources;
 
+use App\Enums\EventType;
+use App\Enums\MeetingType;
 use App\Filament\Resources\EventResource\Pages;
 use App\Filament\Resources\EventResource\RelationManagers;
 use App\Models\Event;
@@ -40,11 +42,11 @@ class EventResource extends Resource
                 Forms\Components\Select::make("timezone")
                     ->options(["Asia/Shanghai"]),
                 Forms\Components\Select::make("event_type")
-                    ->options(["CONFERENCE", "SIMPLE_EVENT"]),
+                    ->options(EventType::asSelectArray()),
                 Forms\Components\Select::make("access_level")
                     ->options(["PRIVATE_UNRESTRICTED", "PRIVATE_RESTRICTED"]),
                 Forms\Components\Select::make("meeting_type")
-                    ->options(["MEETING", "WEBINAR"]),
+                    ->options(MeetingType::asSelectArray()),
                 Forms\Components\SpatieTagsInput::make('categories'),
                 Forms\Components\SpatieTagsInput::make('tags'),
                 Forms\Components\Select::make("status")
