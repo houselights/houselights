@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Filament\Resources\Event;
+namespace App\Filament\Resources;
 
-use App\Filament\Resources\Event\AttendeeResource\Pages;
-use App\Filament\Resources\Event\AttendeeResource\RelationManagers;
-use App\Models\Event\Attendee;
+use App\Filament\Resources\EventSessionAttendeeResource\Pages;
+use App\Filament\Resources\EventSessionAttendeeResource\RelationManagers;
+use App\Models\EventSessionAttendee;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -15,13 +15,13 @@ use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
-class AttendeeResource extends Resource
+class EventSessionAttendeeResource extends Resource
 {
-    protected static ?string $model = Attendee::class;
+    protected static ?string $model = EventSessionAttendee::class;
 
     protected static ?string $navigationGroup = "Event";
 
-    protected static ?string $navigationLabel = "Attendees";
+    protected static ?string $navigationLabel = "Session Attendees";
 
     protected static ?int $navigationSort = 60;
 
@@ -73,9 +73,9 @@ class AttendeeResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListAttendees::route('/'),
-            //'create' => Pages\CreateAttendee::route('/create'),
-            'edit' => Pages\EditAttendee::route('/{record}/edit'),
+            'index' => Pages\ListEventSessionAttendees::route('/'),
+            //'create' => Pages\CreateEventSessionAttendee::route('/create'),
+            'edit' => Pages\EditEventSessionAttendee::route('/{record}/edit'),
         ];
     }
 }

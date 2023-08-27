@@ -1,19 +1,18 @@
 <?php
 
-namespace App\Models\Event;
+namespace App\Models;
 
-use App\Models\Event;
+use App\Models\Event\Session;
+use App\Models\Event\Ticket;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Kra8\Snowflake\HasSnowflakePrimary;
 
-class Attendee extends Model
+class EventSessionAttendee extends Model
 {
     use HasFactory;
     use HasSnowflakePrimary;
-
-    protected $table = "event_attendees";
 
     protected $fillable = ['ticket_id'];
 
