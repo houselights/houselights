@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Policies\Event;
+namespace App\Policies;
 
 use App\Models\User;
-use App\Models\Event\Session;
+use App\Models\EventSession;
 use Illuminate\Auth\Access\HandlesAuthorization;
 
-class SessionPolicy
+class EventSessionPolicy
 {
     use HandlesAuthorization;
 
@@ -25,10 +25,10 @@ class SessionPolicy
      * Determine whether the user can view the model.
      *
      * @param  \App\Models\User  $user
-     * @param  \App\Models\Event\Session  $session
+     * @param  \App\Models\EventSession  $eventSession
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function view(User $user, Session $session): bool
+    public function view(User $user, EventSession $eventSession): bool
     {
         return $user->can('view_event::session');
     }
@@ -48,10 +48,10 @@ class SessionPolicy
      * Determine whether the user can update the model.
      *
      * @param  \App\Models\User  $user
-     * @param  \App\Models\Event\Session  $session
+     * @param  \App\Models\EventSession  $eventSession
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function update(User $user, Session $session): bool
+    public function update(User $user, EventSession $eventSession): bool
     {
         return $user->can('update_event::session');
     }
@@ -60,10 +60,10 @@ class SessionPolicy
      * Determine whether the user can delete the model.
      *
      * @param  \App\Models\User  $user
-     * @param  \App\Models\Event\Session  $session
+     * @param  \App\Models\EventSession  $eventSession
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function delete(User $user, Session $session): bool
+    public function delete(User $user, EventSession $eventSession): bool
     {
         return $user->can('delete_event::session');
     }
@@ -83,10 +83,10 @@ class SessionPolicy
      * Determine whether the user can permanently delete.
      *
      * @param  \App\Models\User  $user
-     * @param  \App\Models\Event\Session  $session
+     * @param  \App\Models\EventSession  $eventSession
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function forceDelete(User $user, Session $session): bool
+    public function forceDelete(User $user, EventSession $eventSession): bool
     {
         return $user->can('force_delete_event::session');
     }
@@ -106,10 +106,10 @@ class SessionPolicy
      * Determine whether the user can restore.
      *
      * @param  \App\Models\User  $user
-     * @param  \App\Models\Event\Session  $session
+     * @param  \App\Models\EventSession  $eventSession
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function restore(User $user, Session $session): bool
+    public function restore(User $user, EventSession $eventSession): bool
     {
         return $user->can('restore_event::session');
     }
@@ -129,10 +129,10 @@ class SessionPolicy
      * Determine whether the user can replicate.
      *
      * @param  \App\Models\User  $user
-     * @param  \App\Models\Event\Session  $session
+     * @param  \App\Models\EventSession  $eventSession
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function replicate(User $user, Session $session): bool
+    public function replicate(User $user, EventSession $eventSession): bool
     {
         return $user->can('replicate_event::session');
     }

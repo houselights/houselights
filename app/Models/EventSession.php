@@ -1,22 +1,19 @@
 <?php
 
-namespace App\Models\Event;
+namespace App\Models;
 
-use App\Models\Event;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Kra8\Snowflake\HasSnowflakePrimary;
 
-class Session extends Model
+class EventSession extends Model
 {
     use HasFactory;
     use HasSnowflakePrimary;
 
     protected $fillable = ['name', 'description'];
-
-    protected $table = "event_sessions";
 
     public function event(): BelongsTo
     {

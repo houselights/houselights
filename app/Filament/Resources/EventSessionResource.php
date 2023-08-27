@@ -1,27 +1,23 @@
 <?php
 
-namespace App\Filament\Resources\Event;
+namespace App\Filament\Resources;
 
-use App\Filament\Resources\Event\SessionResource\Pages;
-use App\Filament\Resources\Event\SessionResource\RelationManagers;
-use App\Models\Event\Session;
-use Filament\Facades\Filament;
+use App\Filament\Resources\EventSessionResource\Pages;
+use App\Filament\Resources\EventSessionResource\RelationManagers;
+use App\Models\EventSession;
 use Filament\Forms;
 use Filament\Forms\Form;
-use Filament\Panel;
 use Filament\Resources\Resource;
 use Filament\Support\Enums\FontFamily;
 use Filament\Tables;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
-use Illuminate\Support\Facades\Route;
 
-class SessionResource extends Resource
+class EventSessionResource extends Resource
 {
-    protected static ?string $model = Session::class;
+    protected static ?string $model = EventSession::class;
 
     protected static ?string $navigationGroup = "Event";
 
@@ -68,16 +64,16 @@ class SessionResource extends Resource
     public static function getRelations(): array
     {
         return [
-            RelationManagers\AttendeesRelationManager::class,
+            //
         ];
     }
 
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListSessions::route('/'),
-            //'create' => Pages\CreateSession::route('/create'),
-            'edit' => Pages\EditSession::route('/{record}/edit'),
+            'index' => Pages\ListEventSessions::route('/'),
+            //'create' => Pages\CreateEventSession::route('/create'),
+            'edit' => Pages\EditEventSession::route('/{record}/edit'),
         ];
     }
 }
