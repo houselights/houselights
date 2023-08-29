@@ -12,7 +12,7 @@
                     <x-card title="{{ $event->name }}">
                         {{ $event->description }}
                         <x-slot:figure>
-                            <img src="https://picsum.photos/500/200"/>
+                            <img src="https://picsum.photos/500/200?{{ Str::random(8) }}"/>
                         </x-slot:figure>
                         <x-slot:actions>
                             <a href="{{ route('events.show', $event) }}">
