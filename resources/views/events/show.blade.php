@@ -13,7 +13,7 @@
 
                     <x-header title="{{ $event->name }}" subtitle="{{ $event->description }}" separator/>
 
-                    <x-form method="post" action="{{ route('events.registrants.store', $event) }}">
+                    <x-form method="post" action="{{ route('events.tickets.store', $event) }}">
                         {{ csrf_field() }}
 
                         会议
@@ -24,7 +24,7 @@
                         <x-select label="票类型" :options="$event->ticketTypes" name="ticketTypeId"/>
 
                         <x-slot:actions>
-                            <x-button label="报名" class="btn-primary" type="submit" spinner="save"/>
+                            <x-button label="购票" class="btn-primary" type="submit" spinner="save"/>
                         </x-slot:actions>
                     </x-form>
                 </div>

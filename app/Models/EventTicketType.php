@@ -22,6 +22,6 @@ class EventTicketType extends Model
 
     public function tickets(): HasMany
     {
-        return $this->hasMany(EventTicket::class);
+        return $this->hasMany(EventTicket::class, 'ticket_type_id');
     }
 }
