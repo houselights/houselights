@@ -16,10 +16,12 @@
                     <x-form method="post" action="{{ route('events.tickets.store', $event) }}">
                         {{ csrf_field() }}
 
-                        会议
-                        @foreach($event->sessions as $session)
-                            <x-checkbox label="{{ $session->name }}" name="sessions[]" value="{{ $session->id }}"/>
-                        @endforeach
+                        <div>
+                            <div class="font-bold">会议</div>
+                            @foreach($event->sessions as $session)
+                                <p>{{ $session->name }}</p>
+                            @endforeach
+                        </div>
 
                         <x-select label="票类型" :options="$event->ticketTypes" name="ticketTypeId"/>
 
