@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use App\Models\Event;
+use App\Models\EventExhibitor;
 use App\Models\EventSession;
 use App\Models\EventTicket;
 use App\Models\EventTicketType;
@@ -32,6 +33,7 @@ class DatabaseSeeder extends Seeder
         Event::factory()
             ->has(EventTicketType::factory()->count(3), 'ticketTypes')
             ->has(EventSession::factory()->count(3), 'sessions')
+            ->has(EventExhibitor::factory()->count(8), 'exhibitors')
             ->count(6)
             ->create();
     }

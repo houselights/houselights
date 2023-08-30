@@ -30,4 +30,9 @@ class Event extends Model
     {
         return $this->hasMany(EventRegistrant::class);
     }
+
+    public function exhibitors(): HasMany
+    {
+        return $this->hasMany(EventExhibitor::class);
+    }
 }
