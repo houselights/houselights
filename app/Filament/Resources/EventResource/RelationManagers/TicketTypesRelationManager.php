@@ -37,6 +37,7 @@ class TicketTypesRelationManager extends RelationManager
                 Tables\Columns\TextColumn::make('id')->fontFamily(FontFamily::Mono),
                 Tables\Columns\TextColumn::make('name'),
                 Tables\Columns\TextColumn::make('description'),
+                Tables\Columns\TextColumn::make('sold_quantity'),
             ])
             ->filters([
                 //

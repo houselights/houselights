@@ -17,7 +17,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::namespace('App\Http\Controllers')->group(function () {
+Route::middleware([
+    'auth:sanctum',
+    config('jetstream.auth_session'),
+    'verified',
+])->namespace('App\Http\Controllers')->group(function () {
     Route::resource("hubs", 'HubController')->only(['index', 'show']);
     Route::resource("events", 'EventController')->only(['index', 'show']);
     Route::resource("events.registrants", 'EventRegistrantController')->only(['store']);

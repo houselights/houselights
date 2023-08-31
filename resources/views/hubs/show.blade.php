@@ -16,7 +16,7 @@
                         </x-slot:figure>
                         <x-slot:actions>
                             <a href="{{ route('events.show', $event) }}">
-                                <x-button label="报名" class="btn-primary" />
+                                <x-button label="查看" class="btn-primary" />
                             </a>
                         </x-slot:actions>
                     </x-card>

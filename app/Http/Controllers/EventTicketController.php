@@ -11,11 +11,8 @@ class EventTicketController extends Controller
 {
     public function store(Event $event, StoreEventTicketRequest $request)
     {
-        $ticketType = $event->ticketTypes()->find($request->get('ticketTypeId'));
-        $ticketType->increment('sold_quantity');
-        $ticketType->save();
-
-        $ticket = $ticketType->tickets()->make();
+        $ticket = EventTicket::make();
+        $ticket->ticket_type_id = $request->get('ticketTypeId');
         $ticket->user()->associate($request->user());
         $ticket->save();
 

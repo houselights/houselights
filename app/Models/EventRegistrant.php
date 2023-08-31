@@ -12,7 +12,7 @@ class EventRegistrant extends Model
     use HasFactory;
     use HasSnowflakePrimary;
 
-    protected $fillable = ['user_id'];
+    protected $fillable = ['user_id', 'event_id'];
 
     public function event(): BelongsTo
     {

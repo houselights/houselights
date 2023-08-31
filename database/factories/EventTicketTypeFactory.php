@@ -17,12 +17,12 @@ class EventTicketTypeFactory extends Factory
     public function definition(): array
     {
         return [
-            'name' => $this->faker->title,
+            'name' => $this->faker->name,
             'currency' => $this->faker->currencyCode,
             'free' => false,
             'price' => 99.9,
             'quantity' => 100,
-            'sold_quantity' => 80,
+            'sold_quantity' => 0,
             'start_time' => '2023-09-09 10:10:10',
             'end_time' => '2023-10-09 10:10:10',
             'description' => $this->faker->address,
