@@ -8,7 +8,9 @@ use App\Models\EventExhibitor;
 use App\Models\EventSession;
 use App\Models\EventTicket;
 use App\Models\EventTicketType;
+use App\Models\Hub;
 use App\Models\User;
+use Illuminate\Database\Eloquent\Factories\Sequence;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -30,11 +32,17 @@ class DatabaseSeeder extends Seeder
             ->create([
                 'email' => 'admin@example.com',
             ]);
+        Hub::factory()
+            ->count(3)
+            ->create();
         Event::factory()
             ->has(EventTicketType::factory()->count(3), 'ticketTypes')
             ->has(EventSession::factory()->count(3), 'sessions')
             ->has(EventExhibitor::factory()->count(8), 'exhibitors')
-            ->count(6)
+            ->sequence(
+                fn (Sequence $sequence) => ['hub_id' => Hub::all()->random()->id],
+            )
+            ->count(12)
             ->create();
     }
 }

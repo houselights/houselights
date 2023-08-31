@@ -18,6 +18,7 @@ Route::get('/', function () {
 });
 
 Route::namespace('App\Http\Controllers')->group(function () {
+    Route::resource("hubs", 'HubController')->only(['index', 'show']);
     Route::resource("events", 'EventController')->only(['index', 'show']);
     Route::resource("events.registrants", 'EventRegistrantController')->only(['store']);
     Route::resource("events.tickets", 'EventTicketController')->only(['store', 'show']);

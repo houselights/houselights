@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('events', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('hub_id')->nullable();
             $table->string('name');
             $table->text('description');
             $table->string('timezone');

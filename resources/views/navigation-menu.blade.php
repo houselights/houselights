@@ -16,7 +16,10 @@
                         {{ __('Dashboard') }}
                     </x-nav-link>
                     <x-nav-link href="{{ route('events.index') }}" :active="request()->routeIs('events.*')">
-                        {{ __('活动列表') }}
+                        {{ __('全部活动') }}
+                    </x-nav-link>
+                    <x-nav-link href="{{ route('hubs.index') }}" :active="request()->routeIs('hubs.*')">
+                        {{ __('全部主题') }}
                     </x-nav-link>
                 </div>
             </div>
@@ -146,7 +149,10 @@
                 {{ __('Dashboard') }}
             </x-responsive-nav-link>
             <x-responsive-nav-link href="{{ route('events.index') }}" :active="request()->routeIs('events.*')">
-                {{ __('活动列表') }}
+                {{ __('全部活动') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link href="{{ route('hubs.index') }}" :active="request()->routeIs('hubs.*')">
+                {{ __('全部主题') }}
             </x-responsive-nav-link>
         </div>
 
