@@ -16,6 +16,8 @@
         "filament/spatie-laravel-tags-plugin": "^3.0-stable",
         "guzzlehttp/guzzle": "^7.2",
         "kra8/laravel-snowflake": "^2.2",
+        "laravel-notification-channels/apn": "^5.0",
+        "laravel-notification-channels/webhook": "^2.4",
         "laravel/framework": "^10.10",
         "laravel/horizon": "^5.19",
         "laravel/jetstream": "^4.0",
