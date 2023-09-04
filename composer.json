@@ -25,7 +25,7 @@
         "laravel/telescope": "^4.16",
         "laravel/tinker": "^2.8",
         "livewire/livewire": "^3.0",
-        "robsontenorio/mary": "^0.32.0"
+        "robsontenorio/mary": "^0.33.4"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.9",
