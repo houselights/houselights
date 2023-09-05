@@ -26,7 +26,7 @@
                         <x-select label="票类型" :options="$event->ticketTypes" name="ticketTypeId"/>
 
                         <x-slot:actions>
-                            <x-button label="购票" class="btn-primary" type="submit" spinner="save"/>
+                            <x-button class="btn-primary">购票</x-button>
                         </x-slot:actions>
                     </x-form>
                 </div>

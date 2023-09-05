@@ -9,14 +9,16 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="grid grid-cols-3 gap-6">
                 @foreach($hub->events as $event)
-                    <x-card title="{{ $event->name }}">
+                    <x-card>
+                        <x-slot:title>
+                            <a href="{{ route('events.show', $event) }}">{{ $event->name }}</a>
+                        </x-slot:title>
                         {{ $event->description }}
                         <x-slot:figure>
-                            <img src="https://picsum.photos/900/500?{{ Str::random(8) }}"/>
+                            <a href="{{ route('events.show', $event) }}">
+                                <img src="https://picsum.photos/900/500?{{ Str::random(8) }}"/>
+                            </a>
                         </x-slot:figure>
-                        <x-slot:actions>
-                            <a href="{{ route('events.show', $event) }}" class="btn">查看</a>
-                        </x-slot:actions>
                     </x-card>
                 @endforeach
             </div>
