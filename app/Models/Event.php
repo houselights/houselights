@@ -37,6 +37,16 @@ class Event extends Model
         return $this->hasMany(EventExhibitor::class);
     }
 
+    public function pages(): HasMany
+    {
+        return $this->hasMany(EventPage::class);
+    }
+
+    public function menus(): HasMany
+    {
+        return $this->hasMany(EventMenu::class);
+    }
+
     public function hub(): BelongsTo
     {
         return $this->belongsTo(Hub::class);
