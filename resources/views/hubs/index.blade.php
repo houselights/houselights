@@ -15,9 +15,7 @@
                             <img src="https://picsum.photos/900/500?{{ Str::random(8) }}"/>
                         </x-slot:figure>
                         <x-slot:actions>
-                            <a href="{{ route('hubs.show', $hub) }}">
-                                <x-button label="查看" class="btn-primary" />
-                            </a>
+                            <a href="{{ route('hubs.show', $hub) }}" class="btn">查看</a>
                         </x-slot:actions>
                     </x-card>
                 @endforeach
