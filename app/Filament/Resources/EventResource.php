@@ -8,8 +8,6 @@ use App\Filament\Resources\EventResource\Pages;
 use App\Filament\Resources\EventResource\RelationManagers;
 use App\Models\Event;
 use Filament\Forms;
-use Filament\Forms\Components\TextInput;
-use Filament\Forms\Components\Textarea;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Support\Enums\FontFamily;
@@ -18,6 +16,7 @@ use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Tapp\FilamentTimezoneField\Forms\Components\TimezoneSelect;
 
 class EventResource extends Resource
 {
@@ -35,29 +34,39 @@ class EventResource extends Resource
     {
         return $form
             ->schema([
-                TextInput::make('name')
+                Forms\Components\SpatieMediaLibraryFileUpload::make('avatar'),
+                Forms\Components\TextInput::make('name')
                     ->required(),
-                Textarea::make('description')
+                Forms\Components\Textarea::make('description')
                     ->required(),
-                Forms\Components\Select::make("timezone")
-                    ->options(["Asia/Shanghai"]),
+                TimezoneSelect::make("timezone")
+                    ->required(),
                 Forms\Components\Select::make("event_type")
-                    ->options(EventType::asSelectArray()),
+                    ->options(EventType::asSelectArray())
+                    ->required(),
                 Forms\Components\Select::make("access_level")
-                    ->options(["PRIVATE_UNRESTRICTED", "PRIVATE_RESTRICTED"]),
+                    ->options(["PRIVATE_UNRESTRICTED", "PRIVATE_RESTRICTED"])
+                    ->required(),
                 Forms\Components\Select::make("meeting_type")
-                    ->options(MeetingType::asSelectArray()),
+                    ->options(MeetingType::asSelectArray())
+                    ->required(),
                 Forms\Components\SpatieTagsInput::make('categories'),
                 Forms\Components\SpatieTagsInput::make('tags'),
                 Forms\Components\Select::make("status")
-                    ->options(["PUBLISHED", "DRAFT"]),
-                Forms\Components\DateTimePicker::make('start_time'),
-                Forms\Components\DateTimePicker::make('end_time'),
+                    ->options(["PUBLISHED", "DRAFT"])
+                    ->required(),
+                Forms\Components\DateTimePicker::make('start_time')
+                    ->required(),
+                Forms\Components\DateTimePicker::make('end_time')
+                    ->required(),
 
-                TextInput::make('contact_name'),
+                Forms\Components\TextInput::make('contact_name')
+                    ->required(),
 
-                Forms\Components\DateTimePicker::make('lobby_start_time'),
-                Forms\Components\DateTimePicker::make('lobby_end_time'),
+                Forms\Components\DateTimePicker::make('lobby_start_time')
+                    ->required(),
+                Forms\Components\DateTimePicker::make('lobby_end_time')
+                    ->required(),
 
 
 

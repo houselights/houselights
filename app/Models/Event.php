@@ -7,13 +7,16 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Kra8\Snowflake\HasSnowflakePrimary;
+use Spatie\MediaLibrary\HasMedia;
+use Spatie\MediaLibrary\InteractsWithMedia;
 use Spatie\Tags\HasTags;
 
-class Event extends Model
+class Event extends Model implements HasMedia
 {
     use HasFactory;
     use HasSnowflakePrimary;
     use HasTags;
+    use InteractsWithMedia;
 
     protected $fillable = ['name', 'description', 'timezone', 'event_type', 'access_level', 'meeting_type', 'status', 'start_time', 'end_time', 'contact_name', 'lobby_start_time', 'lobby_end_time'];
 

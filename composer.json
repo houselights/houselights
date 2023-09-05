@@ -13,7 +13,10 @@
         "bensampo/laravel-enum": "^6.6",
         "bezhansalleh/filament-shield": "^3.0@beta",
         "filament/filament": "^3.0-stable",
+        "filament/spatie-laravel-media-library-plugin": "^3.0-stable",
+        "filament/spatie-laravel-settings-plugin": "^3.0-stable",
         "filament/spatie-laravel-tags-plugin": "^3.0-stable",
+        "filament/spatie-laravel-translatable-plugin": "^3.0-stable",
         "guzzlehttp/guzzle": "^7.2",
         "kra8/laravel-snowflake": "^2.2",
         "laravel-notification-channels/apn": "^5.0",
@@ -25,7 +28,11 @@
         "laravel/telescope": "^4.16",
         "laravel/tinker": "^2.8",
         "livewire/livewire": "^3.0",
-        "robsontenorio/mary": "^0.33.4"
+        "pxlrbt/filament-excel": "^2.1",
+        "robsontenorio/mary": "^0.33.4",
+        "shuvroroy/filament-spatie-laravel-backup": "^2.0",
+        "shuvroroy/filament-spatie-laravel-health": "^2.0",
+        "tapp/filament-timezone-field": "^3.0"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.9",

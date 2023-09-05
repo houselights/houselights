@@ -5,6 +5,7 @@ namespace App\Filament\Resources\EventResource\Pages;
 use App\Filament\Resources\EventResource;
 use Filament\Actions;
 use Filament\Resources\Pages\ListRecords;
+use pxlrbt\FilamentExcel\Actions\Pages\ExportAction;
 
 class ListEvents extends ListRecords
 {
@@ -14,6 +15,7 @@ class ListEvents extends ListRecords
     {
         return [
             Actions\CreateAction::make(),
+            ExportAction::make(),
         ];
     }
 }
