@@ -13,7 +13,12 @@ class EventTicketType extends Model
     use HasFactory;
     use HasSnowflakePrimary;
 
-    protected $fillable = ['name', 'description'];
+    protected $fillable = ['name', 'description', 'currency', 'free', 'price', 'quantity', 'start_time', 'end_time'];
+
+    protected $attributes = [
+        'currency' => 'CNY',
+        'sold_quantity' => 0,
+    ];
 
     public function event(): BelongsTo
     {

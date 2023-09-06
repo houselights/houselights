@@ -10,6 +10,7 @@ use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Money\Currencies\ISOCurrencies;
 
 class TicketTypesRelationManager extends RelationManager
 {
@@ -17,11 +18,29 @@ class TicketTypesRelationManager extends RelationManager
 
     public function form(Form $form): Form
     {
+        $currencies = [];
+        foreach (new ISOCurrencies() as $currency) {
+            $currencies[$currency->getCode()] = $currency->getCode();
+        }
+
         return $form
             ->schema([
                 Forms\Components\TextInput::make('name')
                     ->required()
                     ->maxLength(255),
+
+                Forms\Components\DateTimePicker::make('start_time'),
+
+                Forms\Components\DateTimePicker::make('end_time'),
+
+                Forms\Components\Checkbox::make('free'),
+
+                Forms\Components\Select::make('currency')
+                    ->options($currencies),
+
+                Forms\Components\TextInput::make('price'),
+
+                Forms\Components\TextInput::make('quantity'),
 
                 Forms\Components\Textarea::make('description')
                     ->required(),
@@ -37,7 +56,10 @@ class TicketTypesRelationManager extends RelationManager
                 Tables\Columns\TextColumn::make('id')->fontFamily(FontFamily::Mono),
                 Tables\Columns\TextColumn::make('name'),
                 Tables\Columns\TextColumn::make('description'),
+                Tables\Columns\TextColumn::make('quantity'),
                 Tables\Columns\TextColumn::make('sold_quantity'),
+                Tables\Columns\TextColumn::make('start_time'),
+                Tables\Columns\TextColumn::make('end_time'),
             ])
             ->filters([
                 //

@@ -28,6 +28,7 @@
         "laravel/telescope": "^4.16",
         "laravel/tinker": "^2.8",
         "livewire/livewire": "^3.0",
+        "moneyphp/money": "^4.2",
         "pxlrbt/filament-excel": "^2.1",
         "robsontenorio/mary": "^0.33.4",
         "shuvroroy/filament-spatie-laravel-backup": "^2.0",

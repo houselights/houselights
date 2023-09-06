@@ -13,7 +13,12 @@
                         <x-slot:title>
                             <a href="{{ route('events.show', $event) }}">{{ $event->name }}</a>
                         </x-slot:title>
+
+                        <p>开始时间：{{ $event->start_time }}</p>
+                        <p>结束时间：{{ $event->end_time }}</p>
+
                         {{ $event->description }}
+
                         <x-slot:figure>
                             <a href="{{ route('events.show', $event) }}">
                                 <img src="https://picsum.photos/900/500?{{ Str::random(8) }}"/>
