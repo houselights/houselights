@@ -40,6 +40,11 @@ class Event extends Model implements HasMedia
         return $this->hasMany(EventExhibitor::class);
     }
 
+    public function speakers(): HasMany
+    {
+        return $this->hasMany(EventSpeaker::class);
+    }
+
     public function pages(): HasMany
     {
         return $this->hasMany(EventPage::class);
