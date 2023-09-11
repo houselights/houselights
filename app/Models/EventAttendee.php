@@ -7,20 +7,18 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Kra8\Snowflake\HasSnowflakePrimary;
 
-class EventSessionAttendee extends Model
+class EventAttendee extends Model
 {
     use HasFactory;
     use HasSnowflakePrimary;
-
-    protected $fillable = ['ticket_id'];
 
     public function session(): BelongsTo
     {
         return $this->belongsTo(EventSession::class);
     }
 
-    public function ticket(): BelongsTo
+    public function event(): BelongsTo
     {
-        return $this->belongsTo(EventTicket::class);
+        return $this->belongsTo(Event::class);
     }
 }
