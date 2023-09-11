@@ -110,6 +110,8 @@ class EventResource extends Resource
     public static function getRelations(): array
     {
         return [
+            RelationManagers\SpeakersRelationManager::class,
+            RelationManagers\ExhibitorsRelationManager::class,
             RelationManagers\SessionsRelationManager::class,
             RelationManagers\RegistrantsRelationManager::class,
             RelationManagers\TicketTypesRelationManager::class,

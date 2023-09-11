@@ -16,6 +16,8 @@ return new class extends Migration
             $table->unsignedBigInteger('event_id');
             $table->unsignedBigInteger('session_id');
             $table->string('email');
+            $table->string('source');
+            $table->string('action');
             $table->timestamps();
         });
     }

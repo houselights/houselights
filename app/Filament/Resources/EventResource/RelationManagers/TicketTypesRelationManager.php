@@ -33,14 +33,20 @@ class TicketTypesRelationManager extends RelationManager
 
                 Forms\Components\DateTimePicker::make('end_time'),
 
-                Forms\Components\Checkbox::make('free'),
+                Forms\Components\Checkbox::make('free')
+                    ->live()
+                    ->label('免费')
+                    ->helperText("免费票不需要进行支付"),
 
                 Forms\Components\Select::make('currency')
-                    ->options($currencies),
+                    ->options($currencies)
+                    ->hidden(fn (Forms\Get $get): bool => !! $get('free')),
 
-                Forms\Components\TextInput::make('price'),
+                Forms\Components\TextInput::make('price')
+                    ->numeric()
+                    ->hidden(fn (Forms\Get $get): bool => !! $get('free')),
 
-                Forms\Components\TextInput::make('quantity'),
+                Forms\Components\TextInput::make('quantity')->integer(),
 
                 Forms\Components\Textarea::make('description')
                     ->required(),

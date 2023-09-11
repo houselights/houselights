@@ -21,7 +21,7 @@ class EventAttendeeResource extends Resource
 
     protected static ?string $navigationGroup = "Event";
 
-    protected static ?string $navigationLabel = "Event Attendees";
+    protected static ?string $navigationLabel = "Attendees";
 
     protected static ?int $navigationSort = 60;
 
