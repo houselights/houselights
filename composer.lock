@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "cab7d70cfd6fe78bacf9a283ca06905d",
+    "content-hash": "f52faa2d2ed35cf210318a403bb31f06",
     "packages": [
         {
             "name": "3x1io/filament-user",
@@ -12059,6 +12059,53 @@
                 "source": "https://github.com/webmozarts/assert/tree/1.11.0"
             },
             "time": "2022-06-03T18:03:27+00:00"
+        },
+        {
+            "name": "wuwx/filament-currency-field",
+            "version": "v3.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/wuwx/filament-currency-field.git",
+                "reference": "e78123e7dd0d87e22c84426eb00c4ac592c808b5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/wuwx/filament-currency-field/zipball/e78123e7dd0d87e22c84426eb00c4ac592c808b5",
+                "reference": "e78123e7dd0d87e22c84426eb00c4ac592c808b5",
+                "shasum": ""
+            },
+            "require": {
+                "filament/filament": "^3.0-stable",
+                "moneyphp/money": "^4.2",
+                "php": "^8.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Wuwx\\FilamentCurrencyField\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "wuwx",
+                    "email": "wuweixin@gmail.com"
+                }
+            ],
+            "description": "Filament currency field.",
+            "keywords": [
+                "currency",
+                "filament",
+                "laravel"
+            ],
+            "support": {
+                "issues": "https://github.com/wuwx/filament-currency-field/issues",
+                "source": "https://github.com/wuwx/filament-currency-field/tree/v3.0.0"
+            },
+            "time": "2023-09-11T15:05:09+00:00"
         }
     ],
     "packages-dev": [

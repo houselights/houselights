@@ -10,7 +10,7 @@ use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
-use Money\Currencies\ISOCurrencies;
+use Wuwx\FilamentCurrencyField\Forms\Components\CurrencySelect;
 
 class TicketTypesRelationManager extends RelationManager
 {
@@ -18,11 +18,6 @@ class TicketTypesRelationManager extends RelationManager
 
     public function form(Form $form): Form
     {
-        $currencies = [];
-        foreach (new ISOCurrencies() as $currency) {
-            $currencies[$currency->getCode()] = $currency->getCode();
-        }
-
         return $form
             ->schema([
                 Forms\Components\TextInput::make('name')
@@ -38,8 +33,7 @@ class TicketTypesRelationManager extends RelationManager
                     ->label('免费')
                     ->helperText("免费票不需要进行支付"),
 
-                Forms\Components\Select::make('currency')
-                    ->options($currencies)
+                CurrencySelect::make('currency')
                     ->hidden(fn (Forms\Get $get): bool => !! $get('free')),
 
                 Forms\Components\TextInput::make('price')
