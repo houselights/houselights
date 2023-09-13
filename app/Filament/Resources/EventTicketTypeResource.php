@@ -47,7 +47,8 @@ class EventTicketTypeResource extends Resource
                 TextColumn::make('updated_at')->dateTime('Y-m-d H:i:s'),
             ])
             ->filters([
-                //
+                Tables\Filters\SelectFilter::make('event_name')
+                    ->relationship('event', 'name'),
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),

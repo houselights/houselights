@@ -37,10 +37,16 @@ class EventExhibitorResource extends Resource
     {
         return $table
             ->columns([
-                //
+                Tables\Columns\TextColumn::make('name'),
+                Tables\Columns\IconColumn::make('is_sponsor')->boolean(),
+                Tables\Columns\TextColumn::make('description')->limit(40),
+                Tables\Columns\TextColumn::make('website')->limit(40),
+                Tables\Columns\TextColumn::make('event.name'),
             ])
             ->filters([
-                //
+                Tables\Filters\SelectFilter::make('event_name')
+                    ->relationship('event', 'name'),
+                Tables\Filters\TernaryFilter::make('is_sponsor'),
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
