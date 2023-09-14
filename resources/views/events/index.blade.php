@@ -10,22 +10,19 @@
             <div class="grid grid-cols-3 gap-6">
                 @foreach($events as $event)
                     <x-card>
-                        <x-slot:title>
-                            <a href="{{ route('events.show', $event) }}">{{ $event->name }}</a>
-                        </x-slot:title>
-
-                        <p>开始时间：{{ $event->start_time }}</p>
-                        <p>结束时间：{{ $event->end_time }}</p>
-
-                        {{ $event->description }}
-
                         <x-slot:figure>
                             <a href="{{ route('events.show', $event) }}">
                                 <img src="https://picsum.photos/900/500?{{ Str::random(8) }}"/>
                             </a>
                         </x-slot:figure>
-                        <x-slot:actions>
-                        </x-slot:actions>
+
+                        <x-slot:title>
+                            <a href="{{ route('events.show', $event) }}">{{ $event->name }}</a>
+                        </x-slot:title>
+
+                        <x-slot:subtitle>
+                            <p>时间：{{ app('ranger')->format($event->start_time, $event->end_time) }}</p>
+                        </x-slot:subtitle>
                     </x-card>
                 @endforeach
             </div>

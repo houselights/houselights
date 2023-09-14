@@ -11,17 +11,10 @@
                 <img src="https://picsum.photos/1600/400"/>
                 <div class="p-6">
 
-                    <x-header title="{{ $event->name }}" subtitle="{{ $event->description }}" separator/>
+                    <x-header title="{{ $event->name }}" separator/>
 
                     <x-form method="post" action="{{ route('events.tickets.store', $event) }}">
                         {{ csrf_field() }}
-
-                        <div>
-                            <div class="font-bold">会议</div>
-                            @foreach($event->sessions as $session)
-                                <p>{{ $session->name }}</p>
-                            @endforeach
-                        </div>
 
                         <x-select label="票类型" :options="$event->ticketTypes" name="ticketTypeId"/>
 

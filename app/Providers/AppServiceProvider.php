@@ -6,6 +6,8 @@ use App\View\Components\Button;
 use App\View\Components\Dropdown;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
+use IntlDateFormatter;
+use OpenPsa\Ranger\Ranger;
 use Spatie\Health\Checks\Checks\DebugModeCheck;
 use Spatie\Health\Checks\Checks\EnvironmentCheck;
 use Spatie\Health\Checks\Checks\OptimizedAppCheck;
@@ -18,7 +20,11 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        //
+        $this->app->bind('ranger', function () {
+            $ranger = new Ranger("zh_CN");
+            $ranger->setTimeType(IntlDateFormatter::SHORT);
+            return $ranger;
+        });
     }
 
     /**
