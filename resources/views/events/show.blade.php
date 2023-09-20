@@ -13,15 +13,7 @@
 
                     <x-header title="{{ $event->name }}" separator/>
 
-                    <x-form method="post" action="{{ route('events.tickets.store', $event) }}">
-                        {{ csrf_field() }}
-
-                        <x-select label="票类型" :options="$event->ticketTypes" name="ticketTypeId"/>
-
-                        <x-slot:actions>
-                            <x-button class="btn-primary">购票</x-button>
-                        </x-slot:actions>
-                    </x-form>
+                    <button onclick="Livewire.dispatch('openModal', { component: 'create-event-ticket-form', arguments: { event: {{ $event }} }})" class="btn">购票</button>
                 </div>
             </div>
         </div>
