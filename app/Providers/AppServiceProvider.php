@@ -2,8 +2,7 @@
 
 namespace App\Providers;
 
-use App\View\Components\Button;
-use App\View\Components\Dropdown;
+use App\View\Components;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
 use IntlDateFormatter;
@@ -32,8 +31,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        Blade::component('dropdown', Dropdown::class);
-        Blade::component('button', Button::class);
+        Blade::component('button', Components\Button::class);
+        Blade::component('dropdown', Components\Dropdown::class);
+        Blade::component('modal', Components\Modal::class);
 
         Health::checks([
             OptimizedAppCheck::new(),
