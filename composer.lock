@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b0578f3d44064f8e3fdc705f7cbbac77",
+    "content-hash": "d54097c054deaa99e28d7ae2f3983044",
     "packages": [
         {
             "name": "3x1io/filament-user",
@@ -283,16 +283,16 @@
         },
         {
             "name": "bezhansalleh/filament-shield",
-            "version": "3.0.0-beta2",
+            "version": "3.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bezhanSalleh/filament-shield.git",
-                "reference": "f9bf211909c90932b9c1a7188ee4eadf0c92d7a1"
+                "reference": "60b9607beb8cb8ece9b7bc37eab4d22b3bb5f43a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bezhanSalleh/filament-shield/zipball/f9bf211909c90932b9c1a7188ee4eadf0c92d7a1",
-                "reference": "f9bf211909c90932b9c1a7188ee4eadf0c92d7a1",
+                "url": "https://api.github.com/repos/bezhanSalleh/filament-shield/zipball/60b9607beb8cb8ece9b7bc37eab4d22b3bb5f43a",
+                "reference": "60b9607beb8cb8ece9b7bc37eab4d22b3bb5f43a",
                 "shasum": ""
             },
             "require": {
@@ -356,7 +356,7 @@
             ],
             "support": {
                 "issues": "https://github.com/bezhanSalleh/filament-shield/issues",
-                "source": "https://github.com/bezhanSalleh/filament-shield/tree/3.0.0-beta2"
+                "source": "https://github.com/bezhanSalleh/filament-shield/tree/3.0.1"
             },
             "funding": [
                 {
@@ -364,7 +364,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-08-05T12:34:59+00:00"
+            "time": "2023-09-16T19:55:40+00:00"
         },
         {
             "name": "blade-ui-kit/blade-heroicons",
@@ -3874,16 +3874,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v10.23.1",
+            "version": "v10.24.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "dbfd495557678759153e8d71cc2f6027686ca51e"
+                "reference": "bcebd0a4c015d5c38aeec299d355a42451dd3726"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/dbfd495557678759153e8d71cc2f6027686ca51e",
-                "reference": "dbfd495557678759153e8d71cc2f6027686ca51e",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/bcebd0a4c015d5c38aeec299d355a42451dd3726",
+                "reference": "bcebd0a4c015d5c38aeec299d355a42451dd3726",
                 "shasum": ""
             },
             "require": {
@@ -4070,20 +4070,20 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2023-09-13T14:51:46+00:00"
+            "time": "2023-09-19T15:25:04+00:00"
         },
         {
             "name": "laravel/horizon",
-            "version": "v5.20.0",
+            "version": "v5.21.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/horizon.git",
-                "reference": "2fc2ba769a592e92d170d85e346a5631b3a90ed5"
+                "reference": "3a1474a398c90d1bf7bc07eff25ef912143452dd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/horizon/zipball/2fc2ba769a592e92d170d85e346a5631b3a90ed5",
-                "reference": "2fc2ba769a592e92d170d85e346a5631b3a90ed5",
+                "url": "https://api.github.com/repos/laravel/horizon/zipball/3a1474a398c90d1bf7bc07eff25ef912143452dd",
+                "reference": "3a1474a398c90d1bf7bc07eff25ef912143452dd",
                 "shasum": ""
             },
             "require": {
@@ -4146,22 +4146,22 @@
             ],
             "support": {
                 "issues": "https://github.com/laravel/horizon/issues",
-                "source": "https://github.com/laravel/horizon/tree/v5.20.0"
+                "source": "https://github.com/laravel/horizon/tree/v5.21.0"
             },
-            "time": "2023-08-30T14:04:11+00:00"
+            "time": "2023-09-18T16:00:51+00:00"
         },
         {
             "name": "laravel/jetstream",
-            "version": "v4.0.1",
+            "version": "v4.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/jetstream.git",
-                "reference": "21f3f26c9acc69ae0d4fd72158ef2126d71c463a"
+                "reference": "793b3d8cc43063d878e3d08df04a9e831763a466"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/jetstream/zipball/21f3f26c9acc69ae0d4fd72158ef2126d71c463a",
-                "reference": "21f3f26c9acc69ae0d4fd72158ef2126d71c463a",
+                "url": "https://api.github.com/repos/laravel/jetstream/zipball/793b3d8cc43063d878e3d08df04a9e831763a466",
+                "reference": "793b3d8cc43063d878e3d08df04a9e831763a466",
                 "shasum": ""
             },
             "require": {
@@ -4177,7 +4177,7 @@
                 "laravel/sanctum": "^3.0",
                 "livewire/livewire": "^3.0",
                 "mockery/mockery": "^1.0",
-                "orchestra/testbench": "^8.0",
+                "orchestra/testbench": "^8.11",
                 "phpstan/phpstan": "^1.10",
                 "phpunit/phpunit": "^9.3"
             },
@@ -4217,7 +4217,7 @@
                 "issues": "https://github.com/laravel/jetstream/issues",
                 "source": "https://github.com/laravel/jetstream"
             },
-            "time": "2023-08-27T15:50:10+00:00"
+            "time": "2023-09-19T14:01:29+00:00"
         },
         {
             "name": "laravel/pennant",
@@ -4297,16 +4297,16 @@
         },
         {
             "name": "laravel/prompts",
-            "version": "v0.1.7",
+            "version": "v0.1.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/prompts.git",
-                "reference": "554e7d855a22e87942753d68e23b327ad79b2070"
+                "reference": "68dcc65babf92e1fb43cba0b3f78fc3d8002709c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/prompts/zipball/554e7d855a22e87942753d68e23b327ad79b2070",
-                "reference": "554e7d855a22e87942753d68e23b327ad79b2070",
+                "url": "https://api.github.com/repos/laravel/prompts/zipball/68dcc65babf92e1fb43cba0b3f78fc3d8002709c",
+                "reference": "68dcc65babf92e1fb43cba0b3f78fc3d8002709c",
                 "shasum": ""
             },
             "require": {
@@ -4339,9 +4339,9 @@
             ],
             "support": {
                 "issues": "https://github.com/laravel/prompts/issues",
-                "source": "https://github.com/laravel/prompts/tree/v0.1.7"
+                "source": "https://github.com/laravel/prompts/tree/v0.1.8"
             },
-            "time": "2023-09-12T11:09:22+00:00"
+            "time": "2023-09-19T15:33:56+00:00"
         },
         {
             "name": "laravel/sanctum",
@@ -4471,16 +4471,16 @@
         },
         {
             "name": "laravel/telescope",
-            "version": "v4.16.2",
+            "version": "v4.16.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/telescope.git",
-                "reference": "aa7f7cba4987e6f0d793d61e6f34bbbb66c2e82a"
+                "reference": "4ae05205499a20a458110243c7c1be6deebfe12f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/telescope/zipball/aa7f7cba4987e6f0d793d61e6f34bbbb66c2e82a",
-                "reference": "aa7f7cba4987e6f0d793d61e6f34bbbb66c2e82a",
+                "url": "https://api.github.com/repos/laravel/telescope/zipball/4ae05205499a20a458110243c7c1be6deebfe12f",
+                "reference": "4ae05205499a20a458110243c7c1be6deebfe12f",
                 "shasum": ""
             },
             "require": {
@@ -4536,9 +4536,9 @@
             ],
             "support": {
                 "issues": "https://github.com/laravel/telescope/issues",
-                "source": "https://github.com/laravel/telescope/tree/v4.16.2"
+                "source": "https://github.com/laravel/telescope/tree/v4.16.3"
             },
-            "time": "2023-08-28T13:54:07+00:00"
+            "time": "2023-09-19T15:59:57+00:00"
         },
         {
             "name": "laravel/tinker",
@@ -5244,16 +5244,16 @@
         },
         {
             "name": "livewire/livewire",
-            "version": "v3.0.4",
+            "version": "v3.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/livewire/livewire.git",
-                "reference": "23d035b6353c6dfe7ea9c8d288295dbbb46ef84a"
+                "reference": "37f11583c61a75d51b2146c2fe38f506ad36014b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/livewire/livewire/zipball/23d035b6353c6dfe7ea9c8d288295dbbb46ef84a",
-                "reference": "23d035b6353c6dfe7ea9c8d288295dbbb46ef84a",
+                "url": "https://api.github.com/repos/livewire/livewire/zipball/37f11583c61a75d51b2146c2fe38f506ad36014b",
+                "reference": "37f11583c61a75d51b2146c2fe38f506ad36014b",
                 "shasum": ""
             },
             "require": {
@@ -5306,7 +5306,7 @@
             "description": "A front-end framework for Laravel.",
             "support": {
                 "issues": "https://github.com/livewire/livewire/issues",
-                "source": "https://github.com/livewire/livewire/tree/v3.0.4"
+                "source": "https://github.com/livewire/livewire/tree/v3.0.5"
             },
             "funding": [
                 {
@@ -5314,7 +5314,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-09-14T22:57:11+00:00"
+            "time": "2023-09-16T11:51:32+00:00"
         },
         {
             "name": "maatwebsite/excel",
@@ -6067,16 +6067,16 @@
         },
         {
             "name": "nette/utils",
-            "version": "v4.0.1",
+            "version": "v4.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nette/utils.git",
-                "reference": "9124157137da01b1f5a5a22d6486cb975f26db7e"
+                "reference": "cead6637226456b35e1175cc53797dd585d85545"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nette/utils/zipball/9124157137da01b1f5a5a22d6486cb975f26db7e",
-                "reference": "9124157137da01b1f5a5a22d6486cb975f26db7e",
+                "url": "https://api.github.com/repos/nette/utils/zipball/cead6637226456b35e1175cc53797dd585d85545",
+                "reference": "cead6637226456b35e1175cc53797dd585d85545",
                 "shasum": ""
             },
             "require": {
@@ -6098,8 +6098,7 @@
                 "ext-intl": "to use Strings::webalize(), toAscii(), normalize() and compare()",
                 "ext-json": "to use Nette\\Utils\\Json",
                 "ext-mbstring": "to use Strings::lower() etc...",
-                "ext-tokenizer": "to use Nette\\Utils\\Reflection::getUseStatements()",
-                "ext-xml": "to use Strings::length() etc. when mbstring is not available"
+                "ext-tokenizer": "to use Nette\\Utils\\Reflection::getUseStatements()"
             },
             "type": "library",
             "extra": {
@@ -6148,9 +6147,9 @@
             ],
             "support": {
                 "issues": "https://github.com/nette/utils/issues",
-                "source": "https://github.com/nette/utils/tree/v4.0.1"
+                "source": "https://github.com/nette/utils/tree/v4.0.2"
             },
-            "time": "2023-07-30T15:42:21+00:00"
+            "time": "2023-09-19T11:58:07+00:00"
         },
         {
             "name": "nikic/php-parser",
@@ -6706,16 +6705,16 @@
         },
         {
             "name": "phpstan/phpdoc-parser",
-            "version": "1.24.0",
+            "version": "1.24.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpdoc-parser.git",
-                "reference": "3510b0a6274cc42f7219367cb3abfc123ffa09d6"
+                "reference": "9f854d275c2dbf84915a5c0ec9a2d17d2cd86b01"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpdoc-parser/zipball/3510b0a6274cc42f7219367cb3abfc123ffa09d6",
-                "reference": "3510b0a6274cc42f7219367cb3abfc123ffa09d6",
+                "url": "https://api.github.com/repos/phpstan/phpdoc-parser/zipball/9f854d275c2dbf84915a5c0ec9a2d17d2cd86b01",
+                "reference": "9f854d275c2dbf84915a5c0ec9a2d17d2cd86b01",
                 "shasum": ""
             },
             "require": {
@@ -6747,9 +6746,9 @@
             "description": "PHPDoc parser with support for nullable, intersection and generic types",
             "support": {
                 "issues": "https://github.com/phpstan/phpdoc-parser/issues",
-                "source": "https://github.com/phpstan/phpdoc-parser/tree/1.24.0"
+                "source": "https://github.com/phpstan/phpdoc-parser/tree/1.24.1"
             },
-            "time": "2023-09-07T20:46:32+00:00"
+            "time": "2023-09-18T12:18:02+00:00"
         },
         {
             "name": "pragmarx/google2fa",
@@ -7342,16 +7341,16 @@
         },
         {
             "name": "pxlrbt/filament-excel",
-            "version": "v2.1.3",
+            "version": "v2.1.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pxlrbt/filament-excel.git",
-                "reference": "56b53a0a1caf962b830592dd9e03ea7f8d705731"
+                "reference": "c228e73c4adc0aa919088033c239705740718c95"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pxlrbt/filament-excel/zipball/56b53a0a1caf962b830592dd9e03ea7f8d705731",
-                "reference": "56b53a0a1caf962b830592dd9e03ea7f8d705731",
+                "url": "https://api.github.com/repos/pxlrbt/filament-excel/zipball/c228e73c4adc0aa919088033c239705740718c95",
+                "reference": "c228e73c4adc0aa919088033c239705740718c95",
                 "shasum": ""
             },
             "require": {
@@ -7397,7 +7396,7 @@
             ],
             "support": {
                 "issues": "https://github.com/pxlrbt/filament-excel/issues",
-                "source": "https://github.com/pxlrbt/filament-excel/tree/v2.1.3"
+                "source": "https://github.com/pxlrbt/filament-excel/tree/v2.1.4"
             },
             "funding": [
                 {
@@ -7405,7 +7404,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-09-05T06:44:19+00:00"
+            "time": "2023-09-11T06:14:04+00:00"
         },
         {
             "name": "queents/console-helpers",
@@ -7692,16 +7691,16 @@
         },
         {
             "name": "robsontenorio/mary",
-            "version": "0.38.2",
+            "version": "0.38.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/robsontenorio/mary.git",
-                "reference": "653eb77a0a17895087925921e3bd966cbf36c634"
+                "reference": "d1e64195512b082907a7c924372428a876c1d16e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/robsontenorio/mary/zipball/653eb77a0a17895087925921e3bd966cbf36c634",
-                "reference": "653eb77a0a17895087925921e3bd966cbf36c634",
+                "url": "https://api.github.com/repos/robsontenorio/mary/zipball/d1e64195512b082907a7c924372428a876c1d16e",
+                "reference": "d1e64195512b082907a7c924372428a876c1d16e",
                 "shasum": ""
             },
             "require": {
@@ -7752,7 +7751,7 @@
             ],
             "support": {
                 "issues": "https://github.com/robsontenorio/mary/issues",
-                "source": "https://github.com/robsontenorio/mary/tree/0.38.2"
+                "source": "https://github.com/robsontenorio/mary/tree/0.38.3"
             },
             "funding": [
                 {
@@ -7760,7 +7759,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-09-17T22:36:54+00:00"
+            "time": "2023-09-19T23:32:38+00:00"
         },
         {
             "name": "ryangjchandler/blade-capture-directive",
@@ -15931,9 +15930,7 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "bezhansalleh/filament-shield": 10
-    },
+    "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
