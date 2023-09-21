@@ -1,13 +1,14 @@
 <div>
     <x-form class="p-6">
-        {{ csrf_field() }}
+        <x-select label="票类型" :options="$event->ticketTypes" placeholder="Select an ticket type"
+                  wire:model.live="ticketTypeId"/>
 
-        <x-select label="票类型" :options="$event->ticketTypes" placeholder="Select an ticket type"  wire:model.live="ticketTypeId"/>
-
-        总数：{{ data_get($ticketType, 'quantity') }} 已售：{{ data_get($ticketType, 'sold_quantity') }}
+        @if($ticketType)
+            余票：{{ data_get($ticketType, 'quantity') - data_get($ticketType, 'sold_quantity') }}
+        @endif
 
         <x-slot:actions>
-            <x-button class="btn-primary" type="button" wire:click="save">购票</x-button>
+            <x-button class="btn-primary" type="button" wire:click="submit">购票</x-button>
         </x-slot:actions>
     </x-form>
 </div>

@@ -5,6 +5,7 @@ namespace App\Livewire;
 use App\Models\Event;
 use App\Models\EventTicket;
 use App\Models\EventTicketType;
+use Closure;
 use Illuminate\Validation\Rule;
 use Livewire\Attributes\Locked;
 use LivewireUI\Modal\ModalComponent;
@@ -12,11 +13,9 @@ use LivewireUI\Modal\ModalComponent;
 class CreateEventTicketForm extends ModalComponent
 {
     #[Locked]
-    public Event $event;
+    public string $eventId;
 
-    public EventTicketType $ticketType;
-
-    public string $ticketTypeId;
+    public string $ticketTypeId = "";
 
     public function rules()
     {
@@ -24,17 +23,18 @@ class CreateEventTicketForm extends ModalComponent
             'ticketTypeId' => [
                 'required',
                 'numeric',
-                Rule::in($this->event->ticketTypes()->pluck('id')),
+                Rule::in(EventTicketType::where('event_id', $this->eventId)->pluck('id')),
+                function (string $attribute, mixed $value, Closure $fail) {
+                    $ticketType = EventTicketType::find($this->ticketTypeId);
+                    if ($ticketType->sold_quantity >= $ticketType->quantity) {
+                        $fail("The {$attribute} is invalid.");
+                    }
+                },
             ],
         ];
     }
 
-    public function updatedTicketTypeId()
-    {
-        $this->ticketType = $this->event->ticketTypes()->find($this->ticketTypeId);
-    }
-
-    public function save()
+    public function submit()
     {
         $this->validate();
         $ticket = EventTicket::make();
@@ -46,6 +46,9 @@ class CreateEventTicketForm extends ModalComponent
 
     public function render()
     {
-        return view('livewire.create-event-ticket-form');
+        $event = Event::find($this->eventId);
+        $ticketType = EventTicketType::find($this->ticketTypeId);
+
+        return view('livewire.create-event-ticket-form', compact('event', 'ticketType'));
     }
 }

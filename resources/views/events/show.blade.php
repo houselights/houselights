@@ -13,7 +13,7 @@
 
                     <x-header title="{{ $event->name }}" separator/>
 
-                    <button onclick="Livewire.dispatch('openModal', { component: 'create-event-ticket-form', arguments: { event: {{ $event }} }})" class="btn">购票</button>
+                    <x-button onclick="Livewire.dispatch('openModal', { component: 'create-event-ticket-form', arguments: { eventId: {{ $event->id }} }})">购票</x-button>
                 </div>
             </div>
         </div>
