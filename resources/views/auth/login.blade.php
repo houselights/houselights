@@ -28,7 +28,7 @@
             <div class="mt-4">
                 <x-label for="captcha" value="{{ __('验证码') }}" />
                 <img src="{{ captcha_src('math') }}">
-                <x-input id="captcha" class="block mt-1 w-full" type="input" name="captcha" required />
+                <x-input id="captcha" class="block mt-1 w-full" type="text" name="captcha" required />
             </div>
 
             <div class="block mt-4">

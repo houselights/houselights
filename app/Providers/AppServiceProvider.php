@@ -34,6 +34,7 @@ class AppServiceProvider extends ServiceProvider
         Blade::component('button', Components\Button::class);
         Blade::component('dropdown', Components\Dropdown::class);
         Blade::component('modal', Components\Modal::class);
+        Blade::component('input', Components\Input::class);
 
         Health::checks([
             OptimizedAppCheck::new(),
