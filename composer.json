@@ -30,6 +30,7 @@
         "laravel/telescope": "^4.16",
         "laravel/tinker": "^2.8",
         "livewire/livewire": "^3.0",
+        "mews/captcha": "^3.3",
         "openpsa/ranger": "^0.5.5",
         "pxlrbt/filament-excel": "^2.1",
         "robsontenorio/mary": "^0.38.3",
